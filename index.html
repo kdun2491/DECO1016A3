@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
 
-    <title>Tourette Syndrom Association of Australia</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
+	<title>Tourette Syndrom Association of Australia</title>
 
-    <link href="reset.css" rel="stylesheet" type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <script src="script.js"></script>
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/images/favicon/site.webmanifest">
 
-    <div class="container">
+	<link href="reset.css" rel="stylesheet" type="text/css" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/packages/flickity/flickity.css" media="screen">
 
-      <header>
-          <img src="/images/tsaa_white.png" id="logo">
+</head>
+
+<body>
+	<script src="script.js"></script>
+  <script src="/packages/flickity/flickity.pkgd.min.js"></script>
+
+
+	<div class="container">
+
+		<header>
+			<a href="index.html"><img src="images/tsaa_white.png" id="logo" alt="Tourette Syndrome Association Of Australia Inc."></a>
         <nav>
-          <div><h2>ABOUT</h2></div>
-          <div><h2>SOCIAL</h2></div>
-          <div><h2>RESOURCES</h2></div>
-          <div><h2>DONATE</h2></div>
+          <div><a href=""><h2>ABOUT</h2></a></div>
+          <div><a href=""><h2>CHAT</h2></a></div>
+          <div><a href=""><h2>RESOURCES</h2></a></div>
+          <div><a href=""><h2>DONATE</h2></a></div>
+        </nav>
+
+        <nav id="nav-small">
+          <div><a href=""><h2>DONATE</h2></a></div>
+          <div id="nav-slide" class="menu-slide-main-off">
+            <div id="menu-bg" class="menu-slide-bg-off"></div>
+            <div><a href=""><h2>Login / Sign-up</h2></a></div>
+            <div><a href=""><h2>ABOUT</h2></a></div>
+            <div><a href=""><h2>CHAT</h2></a></div>
+            <div><a href=""><h2>RESOURCES</h2></a></div>
+            <div><a href=""><h2>DONATE</h2></a></div>
+            <div><img src="images/menu_white.png" id="menu-button" onclick="menuToggle();"></div>
+          </div>
         </nav>
       </header>
 

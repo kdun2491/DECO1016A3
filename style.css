@@ -1,3 +1,8 @@
+body
+{
+  background-color: lightgreen;
+}
+
 h2
 {
   font-family: sans-serif;
@@ -27,30 +32,152 @@ header
   grid-template-columns: 2fr 3fr;
   grid-gap: 1em;
 
-  margin: 1em;
-  height: 50px;
+  margin: 0 1em;
+  position:relative;
 }
 
 #logo
 {
   grid-column: 1 / 2;
   max-width: 100%;
+  margin: 1em 0;
 }
 
-nav
+nav, #nav-small
 {
   grid-column: -2 / -1;
+  grid-row: 1 / 2;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1em;
+  max-height: 60px;
+}
+
+#nav-small
+{
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#nav-slide
+{
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  
+  position:absolute;
+  right: 0;
+  width: 60%;
+  pointer-events: none;
+}
+
+#nav-slide div
+{
+  grid-column: 1 / -1;
+  z-index:1;
+  pointer-events: initial;
+  /*visibility: hidden; /* animate from hidden to visible */
+}
+
+#nav-slide div:first-child
+{
+  position: absolute;
+  width:100%;
+  height:100%;
+  background-color: #D44054;
+  grid-row: 1 / span;
+  z-index:0;
+}
+
+.menu-slide-bg-on
+{
+  top: 0px;
+  transition: all 0.2s ease-out;
+}
+
+.menu-slide-bg-off
+{
+  top: -60px;
+  transition: all 0.2s ease-out;
+}
+
+.menu-slide-main-on
+{
+  top: 0px;
+  transition: all 0.2s ease-out;
+}
+
+.menu-slide-main-off
+{
+  top: -240px;
+  transition: all 0.2s ease-out;
+}
+
+
+#nav-slide div:last-child
+{
+  visibility: visible;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+  margin-right:0px;
+  position: relative;
+  right:-75%;
 }
 
 nav h2
 {
   text-align: center;
-  margin: 0;
 }
+
+#nav-slide h2
+{
+  text-align: right;
+  padding: 1em;
+  padding-right: 10px;
+  color: white;
+}
+
+nav:not(#nav-small) > div:last-child, #nav-small > div:first-child
+{
+  background: #D44054;
+}
+
+nav:not(#nav-small) > div:last-child h2, #nav-small > div:first-child h2
+{
+  color: white;
+}
+
+#nav-slide div:not(:last-child) > a, nav > div > a
+{
+  display:block;
+  height:100%;
+  width:100%;
+  text-decoration: none;
+}
+
+#nav-slide div:not(:last-child) > a:active, nav > div > a:active, #nav-slide div:not(:last-child) > a:hover, nav > div > a:hover
+{
+  background-color: #DC6373;
+}
+
+nav > div > a
+{
+  height:100% - 1.5em;
+  padding: 1.5em 0;
+}
+
+nav img
+{
+  position:relative;
+  max-height: 30px;
+  margin-right: 1em;
+  cursor: pointer;
+  }
 
 #carousel
 {
@@ -129,12 +256,18 @@ article
 
   header
   {
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3em;
   }
 
   nav
   {
     display: none;
+  }
+
+  #nav-small
+  {
+    display: grid;
   }
 
   #resources
