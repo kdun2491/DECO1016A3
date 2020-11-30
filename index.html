@@ -12,85 +12,143 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/images/favicon/site.webmanifest">
 
+  <link rel="stylesheet" href="https://use.typekit.net/oci5aqn.css">
 	<link href="reset.css" rel="stylesheet" type="text/css" />
 	<link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="/packages/flickity/flickity.css" media="screen">
+	<link rel="stylesheet" href="packages/flickity/flickity.css" media="screen">
 
 </head>
 
 <body>
-	<script src="script.js"></script>
-  <script src="/packages/flickity/flickity.pkgd.min.js"></script>
 
 
 	<div class="container">
 
 		<header>
-			<a href="index.html"><img src="images/tsaa_white.png" id="logo" alt="Tourette Syndrome Association Of Australia Inc."></a>
-        <nav>
+			<a href="index.html" id="logo">
+        <img src="images/tsaa_white.png" alt="Tourette Syndrome Association Of Australia Inc.">
+      </a>
+      <nav>
+        <div><a href=""><h2>ABOUT</h2></a></div>
+        <div><a href=""><h2>CHAT</h2></a></div>
+        <div><a href=""><h2>RESOURCES</h2></a></div>
+        <div><a href=""><h2>DONATE</h2></a></div>
+      </nav>
+
+      <nav id="nav-small">
+        <div><a href=""><h2>DONATE</h2></a></div>
+        <div id="nav-slide" class="menu-slide-main-off">
+          <div id="menu-bg" class="menu-slide-bg-off"></div>
+          <div><a href=""><h2>Login / Sign-up</h2></a></div>
           <div><a href=""><h2>ABOUT</h2></a></div>
           <div><a href=""><h2>CHAT</h2></a></div>
           <div><a href=""><h2>RESOURCES</h2></a></div>
           <div><a href=""><h2>DONATE</h2></a></div>
-        </nav>
-
-        <nav id="nav-small">
-          <div><a href=""><h2>DONATE</h2></a></div>
-          <div id="nav-slide" class="menu-slide-main-off">
-            <div id="menu-bg" class="menu-slide-bg-off"></div>
-            <div><a href=""><h2>Login / Sign-up</h2></a></div>
-            <div><a href=""><h2>ABOUT</h2></a></div>
-            <div><a href=""><h2>CHAT</h2></a></div>
-            <div><a href=""><h2>RESOURCES</h2></a></div>
-            <div><a href=""><h2>DONATE</h2></a></div>
-            <div><img src="images/menu_white.png" id="menu-button" onclick="menuToggle();"></div>
-          </div>
-        </nav>
-      </header>
-
-      <section id="carousel">
-        <div class="tray">
-          <img src="images/articles/tactics.png">
+          <div><img src="images/menu_white.png" id="menu-button" onclick="menuToggle();"></div>
         </div>
-        <img src="images/fade_blue.png">
-      </section>
+      </nav>
+    </header>
 
-      <section id="resources">
-        <div>asdf</div>
-      </section>
+    <section id="carousel">
       
-      <section id="social">
-        social
-      </section>
+      <div id="carouselSlide" class="tray carousel-position-two">
+        <div class="slide">
+          
+          <a href="">
+            <img src="images/articles/siblings.png">
+          </a>
 
-      <section id="donate">
-        donate
-      </section>
+          <img class="blue-fade" src="images/fade_blue.png">
+          <img class="black-fade" src="images/fade_black.png">
+          
+          <a href="">
+            <h3>siblings who tic together<br><em>STICK<br>TOGETHER</em></h3>
+          </a>
 
-      <section id="top-article">
-        top article
-      </section>
+          <div class="slide-side-left" onclick="carouselPositionThree();"><img src="images/arrow_left_black.png"></div>
+          <div class="slide-side-right" onclick="carouselPositionTwo();"><img src="images/arrow_right_black.png"></div>
+        </div>
+        <div class="slide">
 
-      <article>
-        article 1
-      </article>
+          <a href="">
+            <img src="images/articles/tactics.png">
+          </a>
 
-      <article>
-        article 2
-      </article>
+          <img class="blue-fade" src="images/fade_blue.png">
+          <img class="black-fade" src="images/fade_black.png">
+          <a href="">
+            <h3>heading back to school<br><em>TAC-TICS</em></h3>
+          </a>
 
-      <article>
-        article 3
-      </article>
+          <div class="slide-side-left" onclick="carouselPositionOne();"><img src="images/arrow_left_black.png"></div>
+          <div class="slide-side-right" onclick="carouselPositionThree();"><img src="images/arrow_right_black.png"></div>
+        </div>
+        <div class="slide">
 
-      <article>
-        article 4
-      </article>
+          <a href="">
+            <img src="images/articles/office.png">
+          </a>
 
-      <footer>
-        footer
-      </footer>
+          <img class="blue-fade" src="images/fade_blue.png">
+          <img class="black-fade" src="images/fade_black.png">
+          
+          <a href="">
+            <h3>how to keep it cool in the<br><em>WORKPLACE</em></h3>
+          </a>
 
-    </div>
-  </body>
+          <div class="slide-side-left" onclick="carouselPositionTwo();"><img src="images/arrow_left_black.png"></div>
+          <div class="slide-side-right" onclick="carouselPositionOne();"><img src="images/arrow_right_black.png"></div>
+        </div>
+      </div>
+
+    <!--  <img src="images/fade_blue.png"> -->
+
+      <div onclick="carouselPositionOne();" class="dotBox"><div id="dot-one" class="dot"></div></div>
+      <div onclick="carouselPositionTwo();" class="dotBox"><div id="dot-two" class="dot active"></div></div>
+      <div onclick="carouselPositionThree();" class="dotBox"><div id="dot-three" class="dot"></div></div>
+
+    </section>
+
+    <section id="resources">
+      resources
+    </section>
+    
+    <section id="social">
+      social
+    </section>
+
+    <section id="donate">
+      donate
+    </section>
+
+    <section id="top-article">
+      top article
+    </section>
+
+    <article>
+      article 1
+    </article>
+
+    <article>
+      article 2
+    </article>
+
+    <article>
+      article 3
+    </article>
+
+    <article>
+      article 4
+    </article>
+
+    <footer>
+      footer
+    </footer>
+
+  </div>
+
+	<script src="jQuery.js"></script>
+	<script src="script.js"></script>
+  <script src="packages/flickity/flickity.pkgd.min.js"></script>
+</body>
 </html>
