@@ -34,3 +34,39 @@ function carouselPositionThree() {
     document.getElementById("dot-two").classList.remove("active");
     document.getElementById("dot-three").classList.add("active");
 }
+
+function donateAmountOne() {
+    document.getElementById("buttonOne").classList.add("clicked");
+    document.getElementById("buttonTwo").classList.remove("clicked");
+    document.getElementById("buttonThree").classList.remove("clicked");
+    document.getElementById("buttonFour").classList.remove("clicked");
+}
+
+function donateAmountTwo() {
+    document.getElementById("buttonOne").classList.remove("clicked");
+    document.getElementById("buttonTwo").classList.add("clicked");
+    document.getElementById("buttonThree").classList.remove("clicked");
+    document.getElementById("buttonFour").classList.remove("clicked");
+}
+
+function donateAmountThree() {
+    document.getElementById("buttonOne").classList.remove("clicked");
+    document.getElementById("buttonTwo").classList.remove("clicked");
+    document.getElementById("buttonThree").classList.add("clicked");
+    document.getElementById("buttonFour").classList.remove("clicked");
+}
+
+function donateAmountFour() {
+    document.getElementById("buttonOne").classList.remove("clicked");
+    document.getElementById("buttonTwo").classList.remove("clicked");
+    document.getElementById("buttonThree").classList.remove("clicked");
+    document.getElementById("buttonFour").classList.add("clicked");
+}
+
+function donateToggle() {
+    document.getElementById("donateArrow").classList.toggle("flipped");
+    document.getElementById("donate-section-one").classList.toggle("slid");
+    document.getElementById("donate-section-two").classList.toggle("slid");
+    document.getElementById("donate-section-one").classList.toggle("slidBack");
+    document.getElementById("donate-section-two").classList.toggle("slidBack");
+}
