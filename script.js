@@ -70,3 +70,12 @@ function donateToggle() {
     document.getElementById("donate-section-one").classList.toggle("slidBack");
     document.getElementById("donate-section-two").classList.toggle("slidBack");
 }
+
+function chatToggle() {
+    document.getElementById("inactive-click-tic").classList.toggle("inactive");
+    document.getElementById("inactive-click-chat").classList.toggle("inactive");
+    document.getElementById("ticbox").classList.toggle("inactive");
+    document.getElementById("chatbox").classList.toggle("inactive");
+    document.getElementById("ticbox").classList.toggle("active");
+    document.getElementById("chatbox").classList.toggle("active");
+}

@@ -1026,3 +1026,114 @@ font-family: acumin-pro, Helvetica, sans-serif;
   overflow:hidden;
   text-overflow:ellipsis;
 }
+
+#chat-container
+{
+  position: absolute;
+  left:50%;
+  width:100%;
+  margin-top:2em;
+}
+
+#chat-container > div
+{
+  position: relative;
+  left: -40%;
+  width:80%;
+  display: flex;
+
+}
+
+  #ticbox, #chatbox
+  {
+    position:relative;
+    background-color: #eee;
+    width:85%;
+    height:500px;
+    margin: 0.5em;
+  border-radius:25px;
+  border-style:none;
+  box-shadow: 0 0 0 5px #4595ae;
+  font-family: acumin-pro, Helvetica, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color:#212121;
+  font-size: 1em;
+  padding: 1em;
+  outline: none;
+    align-self:flex-end;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  }
+
+  #ticbox h4, #chatbox h4
+  {
+    text-align: center;
+  }
+
+  #ticbox.inactive, #chatbox.inactive
+  {
+    width: 15%;
+    height: 100px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #chatbox span.message, #ticbox span.message
+  {
+    position: relative;
+    display:block;
+    width: 75%;
+    padding: 0 2em;
+    margin-top: 1em;
+    margin-left:0;
+    margin-right: auto;
+  }
+
+  #chatbox span.message em
+  {
+    color:#263973;
+    font-weight:700;
+  }
+
+
+  #chatbox span.message.outgoing, #ticbox span.message.outgoing
+  {
+    margin-left: auto;
+    margin-right: 0;
+    text-align:right;
+  }
+
+  #inactive-click-tic, #inactive-click-chat
+  {
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    margin:0;
+    display: block;
+  }
+
+  #inactive-click-tic:not(.inactive), #inactive-click-chat:not(.inactive)
+  {
+    display: none;
+  }
+
+  #typebox
+  {
+    position: absolute;
+    bottom:-75px;
+    height:75px;
+    width:100%;
+  }
+
+
+
+  #chatbox.inactive span, #ticbox.inactive span
+  {
+    display:none;
+  }
+
+  #main
+  {
+    min-height: 650px;
+  }
